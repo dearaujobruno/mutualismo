@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<br>
 
 	<div class="blococentral">
-		<center><h1>Adicionar Sócio</h1></center>
+		<h1>Adicionar Sócio</h1>
 
 		<?php echo form_open('adicionar-socio') ?>
 

@@ -14,35 +14,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<center>
-		<div class="blococentral">
+		<div class="blococentral" style="width: 80%;">
+			<h1>Sócios</h1>
 			
-		
 
-		<table class="tabela">
-			<tr>
-				<th>Nome</th>
-				<th>Sexo</th>
-				<th>Profissão</th>
-				<th>Imigrante</th>
-				<th>Elite</th>
-				<th>Data de Entrada</th>
-				<th>Data de Saída</th>
-			</tr>
+			<table class="tabela">
+				<tr>
+					<th>Nome</th>
+					<th>Sexo</th>
+					<th>Profissão</th>
+					<th>Imigrante</th>
+					<th>Elite</th>
+					<th>Data de Entrada</th>
+					<th>Data de Saída</th>
+				</tr>
 
-				<?php
-					foreach ($lista_socio->result() as $row) {
-						echo '<tr>';
-						echo '<td>'.$row->nome_socio .'</td>';
-						echo '<td>'.$row->sexo_socio .'</td>';
-						echo '<td>'.$row->profissao_socio .'</td>';
-						echo '<td>'.$row->imigrante_socio .'</td>';
-						echo '<td>'.$row->elite_socio .'</td>';
-						echo '<td>'.$row->data_entrada .'</td>';
-						echo '<td>'.$row->data_saida .'</td>';
-						echo '</tr>';
-					}
-				?>
-		</table>
+					<?php
+						foreach ($lista_socio->result() as $row) {
+							echo '<tr>';
+							echo '<td>'.$row->nome_socio .'</td>';
+							echo '<td>'.$row->sexo_socio .'</td>';
+							echo '<td>'.$row->profissao_socio .'</td>';
+							echo '<td>'.$row->imigrante_socio .'</td>';
+							echo '<td>'.$row->elite_socio .'</td>';
+							echo '<td>'.$row->data_entrada .'</td>';
+							echo '<td>'.$row->data_saida .'</td>';
+							echo '</tr>';
+						}
+					?>
+			</table>
 		</div>
 
 	</center>
