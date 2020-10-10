@@ -5,50 +5,85 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Adicione Sócios</title>
-
-	<style type="text/css">
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/estilo.css');?>" />
 </head>
 <body>
-<center>
-	<h1>Adicionar Sócio</h1>
+	<?php include 'header.html';?>
 
-	<?php echo form_open('adicionar-socio') ?>
+	<br>
 
-    	Nome:<br>
-    	<input type="text" name="nome" required><br>
+	<div class="blococentral">
+		<center><h1>Adicionar Sócio</h1></center>
 
-    	Profissão:<br>
-		<input type="text" name="profissao" required><br>
+		<?php echo form_open('adicionar-socio') ?>
 
+	    	<label class="titulos">Nome</label><br>
+	    	<input type="text" name="nome" required><br>
 
-		Data de Entrada:<br>
-		<input type="date" name="data_entrada" min="1800-01-01" max="2030-12-31" required><br>
-		Data de Saída:<br>
-		<input type="date" name="data_saida" min="1800-01-01" max="2030-12-31" required><br>
+	    	<label class="titulos">Profissão/Atividade Econômica</label><br>
+			<input type="text" name="profissao" required><br>
 
-		Sexo:<br>
-		<input type="radio" id="masculino" name="sexo" value="masculino" required>
-		<label for="masculino" >Masculino</label>
-		<input type="radio" id="feminino" name="sexo" value="feminino">
-		<label for="feminino" >Feminino</label><br>
+			<label class="titulos">Data de Entrada</label><br>
+			<input type="date" name="data_entrada" min="1800-01-01" max="2030-12-31" required><br>
+			
+			<label class="titulos">Data de Saída:</label><br>
+			<input type="date" name="data_saida" min="1800-01-01" max="2030-12-31" required><br>
 
-		Imigrante:<br>
-		<input type="radio" id="imigrante" name="imigrante" value="1" required>
-		<label for="imigrante" >Imigrante</label>
-		<input type="radio" id="naoimigrante" name="imigrante" value="0">
-		<label for="naoimigrante" >Não-Imigrante</label><br>
+			<label class="titulos">Sexo</label><br>
+			<label class="botaoescolha" for="masculino">
+				Masculino
+				<input type="radio" id="masculino" name="sexo" value="masculino" required>
+			</label>
+							
+			<label class="botaoescolha" for="feminino">
+				Feminino
+				<input type="radio" id="feminino" name="sexo" value="feminino">
+			</label>
+				
+			<label class="botaoescolha" for="indeterminado" >
+				Indeterminado
+				<input type="radio" id="indeterminado" name="sexo" value="indeterminado">
+			</label>
+			<br>
 
-		Elite:<br>
-		<input type="radio" id="elite" name="elite" value="1" required>
-		<label for="elite" >Elite</label>
-		<input type="radio" id="naoelite" name="elite" value="0">
-		<label for="naoelite" >Não-Elite</label><br><br>
+			<label class="titulos">Imigrante</label><br>
+			<label class="botaoescolha" for="imigrante">
+				Imigrante
+				<input type="radio" id="imigrante" name="imigrante" value="1" required>
+			</label>
+				
+			<label class="botaoescolha" for="naoimigrante">
+				Não-Imigrante
+				<input type="radio" id="naoimigrante" name="imigrante" value="0">
+			</label>
+				
+			<label class="botaoescolha" for="indeterminado_imigrante">
+				Indeterminado
+				<input type="radio" id="indeterminado_imigrante" name="imigrante" value="2">
+			</label>
+			<br>
 
-        <input  type="submit" value="ENVIAR">
-    
-    <?php echo form_close(); ?>
-</center>
+			<label class="titulos">Elite</label><br>
+			<label class="botaoescolha" for="elite">
+				<input type="radio" id="elite" name="elite" value="1" required>
+				Elite
+			</label>
+			
+			<label class="botaoescolha" for="naoelite">
+				<input type="radio" id="naoelite" name="elite" value="0">
+				Não-Elite
+			</label>
+				
+			<label class="botaoescolha" for="indeterminado_elite">
+				<input type="radio" id="indeterminado_elite" name="elite" value="2">
+				Indeterminado				
+			</label>
+			<br>
+
+	        <input  type="submit" value="ENVIAR">
+	    
+	    <?php echo form_close(); ?>
+	</div>
+
 </body>
 </html>

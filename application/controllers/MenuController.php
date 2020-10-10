@@ -19,13 +19,20 @@ class MenuController extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()	{
-		$this->load->view('inicio');
+		echo "não é aqui bro";
 	}
 
 	public function __construct()
     {
         parent::__construct();
         $this->load->helper('form');
+        $this->load->helper('html');
+        $this->load->helper('url');
+
+    }
+
+    public function inicio() {
+    	$this->load->view('inicio');
     }
 
 

@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'MenuController';
+$route['inicio'] = 'MenuController/inicio';
 $route['socio'] = 'SocioController';
 $route['adicionar-socio'] = 'SocioController/adicionar_socio';
 $route['conta'] = 'ContaCorrenteController';

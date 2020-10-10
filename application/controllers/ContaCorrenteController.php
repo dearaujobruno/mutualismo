@@ -20,6 +20,7 @@ class ContaCorrenteController extends CI_Controller {
         $this->load->model('ContaCorrenteModel');
         $this->load->model('SocioModel');
         $this->load->helper('form');
+        $this->load->helper('url');
     }
 
 	public function adicionar_contacorrente() {
