@@ -53,6 +53,7 @@ $route['default_controller'] = 'MenuController';
 $route['inicio'] = 'MenuController/inicio';
 $route['socio'] = 'SocioController';
 $route['adicionar-socio'] = 'SocioController/adicionar_socio';
+$route['visualizar-socio'] = 'SocioController/visualizar_socio';
 $route['conta'] = 'ContaCorrenteController';
 $route['adicionar-conta'] = 'ContaCorrenteController/adicionar_contacorrente';
 $route['menu'] = 'MenuController/menu';

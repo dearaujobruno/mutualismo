@@ -15,8 +15,8 @@ CREATE TABLE socios (
     nome_socio varchar(255),
     sexo_socio varchar(255),
     profissao_socio varchar(255),
-    imigrante_socio boolean,
-    elite_socio boolean,
+    imigrante_socio varchar(255),
+    elite_socio varchar(255),
     data_entrada date,
     data_saida date
 );

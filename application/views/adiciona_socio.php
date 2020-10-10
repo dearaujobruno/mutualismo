@@ -32,50 +32,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label class="titulos">Sexo</label><br>
 			<label class="botaoescolha" for="masculino">
 				Masculino
-				<input type="radio" id="masculino" name="sexo" value="masculino" required>
+				<input type="radio" id="masculino" name="sexo" value="Masculino" required>
 			</label>
 							
 			<label class="botaoescolha" for="feminino">
 				Feminino
-				<input type="radio" id="feminino" name="sexo" value="feminino">
+				<input type="radio" id="feminino" name="sexo" value="Feminino">
 			</label>
 				
 			<label class="botaoescolha" for="indeterminado" >
 				Indeterminado
-				<input type="radio" id="indeterminado" name="sexo" value="indeterminado">
+				<input type="radio" id="indeterminado" name="sexo" value="Indeterminado">
 			</label>
 			<br>
 
 			<label class="titulos">Imigrante</label><br>
 			<label class="botaoescolha" for="imigrante">
 				Imigrante
-				<input type="radio" id="imigrante" name="imigrante" value="1" required>
+				<input type="radio" id="imigrante" name="imigrante" value="Imigrante" required>
 			</label>
 				
 			<label class="botaoescolha" for="naoimigrante">
 				Não-Imigrante
-				<input type="radio" id="naoimigrante" name="imigrante" value="0">
+				<input type="radio" id="naoimigrante" name="imigrante" value="Não-Imigrante">
 			</label>
 				
 			<label class="botaoescolha" for="indeterminado_imigrante">
 				Indeterminado
-				<input type="radio" id="indeterminado_imigrante" name="imigrante" value="2">
+				<input type="radio" id="indeterminado_imigrante" name="imigrante" value="Indeterminado">
 			</label>
 			<br>
 
 			<label class="titulos">Elite</label><br>
 			<label class="botaoescolha" for="elite">
-				<input type="radio" id="elite" name="elite" value="1" required>
+				<input type="radio" id="elite" name="elite" value="Elite" required>
 				Elite
 			</label>
 			
 			<label class="botaoescolha" for="naoelite">
-				<input type="radio" id="naoelite" name="elite" value="0">
+				<input type="radio" id="naoelite" name="elite" value="Não-Elite">
 				Não-Elite
 			</label>
 				
 			<label class="botaoescolha" for="indeterminado_elite">
-				<input type="radio" id="indeterminado_elite" name="elite" value="2">
+				<input type="radio" id="indeterminado_elite" name="elite" value="Indeterminado">
 				Indeterminado				
 			</label>
 			<br>

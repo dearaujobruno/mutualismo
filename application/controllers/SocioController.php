@@ -39,4 +39,9 @@ class SocioController extends CI_Controller {
 
 	}
 
+	public function visualizar_socio() {
+		$data['lista_socio'] = $this->SocioModel->listar_socio();
+		$this->load->view('visualiza_socio', $data);
+	}
+
 }
