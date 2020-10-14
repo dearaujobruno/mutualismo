@@ -13,18 +13,50 @@ body {
   text-align: center;
 }
 
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
   float: left;
 }
+
+.botaoescolha2 {
+  width: 49%;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  padding: 10px 0;
+  margin: 8px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 .botaoescolha {
 	width: 32%;
 	border: 1px solid #bfbfbf;
 	border-radius: 4px;
 	padding: 10px 0;
+  margin: 8px 0;
 	display: inline-block;
-	margin: 5px 0;
   cursor: pointer;
+}
+
+input[type=number], input[type=text], input[type=date], select {
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px 5px;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+input[type=number]:enabled {
+  background: white;
+}
+
+input[type=number]:disabled {
+  background: #d6d6d6;
+}
+
+select {
+  width: 100%;
 }
 
 .titulos {
@@ -32,15 +64,8 @@ input[type=radio] {
   float: left;
 }
 
-input[type=number], input[type=text], input[type=date], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+
+
 
 input[type=submit] {
   width: 100%;
@@ -110,3 +135,4 @@ li a {
 li a:hover {
   background-color: #00843d;
 }
+

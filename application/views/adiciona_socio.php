@@ -23,6 +23,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    	<label class="titulos">Profissão/Atividade Econômica</label><br>
 			<input type="text" name="profissao" required><br>
 
+			<label class="titulos">Tipo de Profissão/Atividade Econômica</label><br>
+			<label class="botaoescolha2" for="artesao">
+				Artesão
+				<input type="radio" id="artesao" name="tipo" value="Artesão">
+			</label>
+
+			<label class="botaoescolha2" for="oficina">
+				Oficina
+				<input type="radio" id="oficina" name="tipo" value="Oficina">
+			</label><br>
+
 			<label class="titulos">Data de Entrada</label><br>
 			<input type="date" name="data_entrada" min="1800-01-01" max="2030-12-31" required><br>
 			
