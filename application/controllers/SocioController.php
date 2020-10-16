@@ -5,6 +5,7 @@ class SocioController extends CI_Controller {
 
 	var $nome;
 	var $profissao;
+	var $tipo;
 	var $sexo;
 	var $imigrante;
 	var $elite;
@@ -28,13 +29,14 @@ class SocioController extends CI_Controller {
 
 		$nome = $_POST['nome'];
 		$profissao = $_POST['profissao'];
+		$tipo = $_POST['tipo'];
 		$sexo = $_POST['sexo'];
 		$imigrante = $_POST['imigrante'];
 		$elite = $_POST['elite'];
 		$data_entrada = $_POST['data_entrada'];
 		$data_saida = $_POST['data_saida'];
 
-		$this->SocioModel->adicionar_socio($nome, $sexo, $profissao, $imigrante, $elite, $data_entrada, $data_saida);
+		$this->SocioModel->adicionar_socio($nome, $sexo, $profissao, $tipo, $imigrante, $elite, $data_entrada, $data_saida);
 		$this->index();
 
 	}

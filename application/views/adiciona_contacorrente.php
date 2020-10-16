@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>Adicione Conta Corrente</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/estilo.css');?>" />
+	<script src="<?php echo 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'; ?>"></script>
 </head>
 <body>
 	<?php include 'header.html';?>
@@ -32,57 +33,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<input type="number" name="haver" min="0" required><br>
 
 			<label class="titulos" for="id_socio">Selecione serviço(s)</label><br>
-			<label class="botaoescolha" for="servico">				
-				<input type="checkbox" id="servico">
+			<label class="botaoescolha" for="aula_checkbox">				
+				<input type="checkbox" id="aula_checkbox">
 				Aula
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="aula" min="0" id="aula_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="diaria_checkbox">
+				<input type="checkbox" id="diaria_checkbox">
 				Diária (Acidente/Doença)
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="diaria" min="0" id="diaria_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="funeral_checkbox">
+				<input type="checkbox" id="funeral_checkbox">
 				Funeral
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="funeral" min="0" id="funeral_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="pensao_checkbox">
+				<input type="checkbox" id="pensao_checkbox">
 				Pensão p/ Viúva
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="pensao" min="0" id="pensao_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="medico_checkbox">
+				<input type="checkbox" id="medico_checkbox">
 				Médico
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="medico" min="0" id="medico_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="remedios_checkbox">
+				<input type="checkbox" id="remedios_checkbox">
 				Remédios
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="remedios" min="0" id="remedios_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="hospital_checkbox">
+				<input type="checkbox" id="hospital_checkbox">
 				Hospital
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="hospital" min="0" id="hospital_field" disabled><br>
 
-			<label class="botaoescolha" for="servico2">
-				<input type="checkbox" id="servico2">
+			<label class="botaoescolha" for="emprestimo_checkbox">
+				<input type="checkbox" id="emprestimo_checkbox">
 				Empréstimo
 			</label>
-			<input style="width: 65%;" type="number" name="deve" min="0" disabled><br>
+			<input style="width: 65%;" type="number" name="emprestimo" min="0" id="emprestimo_field" disabled><br>
 
 			<label class="titulos" for="id_socio">Serviço Extra</label><br>
-			<input style="width: 30%;" type="text" name="haver" min="0" required>
-			<input style="width: 65%;" type="number" name="deve" min="0" required><br>
+			<input style="width: 30%;" type="text" min="0">
+			<input style="width: 65%;" type="number" name="extra" min="0"><br>
 
 			<label class="titulos">Data de Pagamento</label><br>
 			<input type="date" name="data_pagamento" min="1800-01-01" max="2030-12-31" required><br>
@@ -94,13 +95,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   				 border-radius: 4px;
   				 width: 100%;
   				 box-sizing: border-box;
-  				 margin: 8px 0;">			
-			</textarea>
+  				 margin: 8px 0;"></textarea>
 
 			<input type="submit" value="ENVIAR">
 		<?php echo form_close(); ?>
 		
 	</div>
+
+<script>
+	$('#aula_checkbox').click(function() {
+	    $('#aula_field').attr('disabled',! this.checked)
+	});
+
+	$('#diaria_checkbox').click(function() {
+	    $('#diaria_field').attr('disabled',! this.checked)
+	});
+
+	$('#funeral_checkbox').click(function() {
+	    $('#funeral_field').attr('disabled',! this.checked)
+	});
+
+	$('#pensao_checkbox').click(function() {
+	    $('#pensao_field').attr('disabled',! this.checked)
+	});
+
+	$('#medico_checkbox').click(function() {
+	    $('#medico_field').attr('disabled',! this.checked)
+	});
+
+	$('#remedios_checkbox').click(function() {
+	    $('#remedios_field').attr('disabled',! this.checked)
+	});
+
+	$('#hospital_checkbox').click(function() {
+	    $('#hospital_field').attr('disabled',! this.checked)
+	});
+
+	$('#emprestimo_checkbox').click(function() {
+	    $('#emprestimo_field').attr('disabled',! this.checked)
+	});
+
+	$('#extra').click(function() {
+	    $('#extra').attr('disabled',! this.checked)
+	});
+</script>
 	
 </body>
 </html>

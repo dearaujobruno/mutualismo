@@ -15,13 +15,14 @@ CREATE TABLE socios (
     nome_socio varchar(255),
     sexo_socio varchar(255),
     profissao_socio varchar(255),
+    tipo_profissao_socio varchar(255),
     imigrante_socio varchar(255),
     elite_socio varchar(255),
     data_entrada date,
     data_saida date
 );
-INSERT INTO socios (nome_socio, sexo_socio, profissao_socio, imigrante_socio, elite_socio, data_entrada, data_saida)
-VALUES ('João', 'masculino', 'Comerciante', '0', '0', '1905-01-01', '1910-12-15');
+INSERT INTO socios (nome_socio, sexo_socio, profissao_socio, tipo_profissao_socio, imigrante_socio, elite_socio, data_entrada, data_saida)
+VALUES ('João', 'masculino', 'Comerciante', 'Artesão', '0', '0', '1905-01-01', '1910-12-15');
 
 
 
