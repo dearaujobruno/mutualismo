@@ -3,12 +3,14 @@
 class ContaCorrenteModel extends CI_Model
 {
     
-    public function adicionar_contacorrente($deve, $haver, $data_pagamento, $id_socio)
+    public function adicionar_contacorrente($deve, $haver, $data_pagamento, $total_servicos, $todos_servicos, $id_socio)
     {
         $data = array(
         'deve' => $deve,
         'haver' => $haver,
         'data_pagamento' => $data_pagamento,
+        'total_servicos' => $total_servicos,
+        'todos_servicos' => $todos_servicos,
         'id_socio' => $id_socio
 
         );

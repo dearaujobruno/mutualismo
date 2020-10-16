@@ -34,52 +34,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<label class="titulos" for="id_socio">Selecione serviço(s)</label><br>
 			<label class="botaoescolha" for="aula_checkbox">				
-				<input type="checkbox" id="aula_checkbox">
+				<input type="checkbox" id="aula_checkbox" name="aulacb" value="Aula">
 				Aula
 			</label>
-			<input style="width: 65%;" type="number" name="aula" min="0" id="aula_field" disabled><br>
+			<input style="width: 65%;" type="number" name="aula" min="0" value="0" id="aula_field" readonly><br>
 
 			<label class="botaoescolha" for="diaria_checkbox">
-				<input type="checkbox" id="diaria_checkbox">
+				<input type="checkbox" id="diaria_checkbox" name="diariacb" value="Diária">
 				Diária (Acidente/Doença)
 			</label>
-			<input style="width: 65%;" type="number" name="diaria" min="0" id="diaria_field" disabled><br>
+			<input style="width: 65%;" type="number" name="diaria" min="0" value="0" id="diaria_field" readonly><br>
 
 			<label class="botaoescolha" for="funeral_checkbox">
-				<input type="checkbox" id="funeral_checkbox">
+				<input type="checkbox" id="funeral_checkbox" name="funeralcb" value="Funeral">
 				Funeral
 			</label>
-			<input style="width: 65%;" type="number" name="funeral" min="0" id="funeral_field" disabled><br>
+			<input style="width: 65%;" type="number" name="funeral" min="0" value="0" id="funeral_field" readonly><br>
 
 			<label class="botaoescolha" for="pensao_checkbox">
-				<input type="checkbox" id="pensao_checkbox">
+				<input type="checkbox" id="pensao_checkbox" name="pensaocb" value="0" value="Pensão">
 				Pensão p/ Viúva
 			</label>
-			<input style="width: 65%;" type="number" name="pensao" min="0" id="pensao_field" disabled><br>
+			<input style="width: 65%;" type="number" name="pensao" min="0" value="0" id="pensao_field" readonly><br>
 
 			<label class="botaoescolha" for="medico_checkbox">
-				<input type="checkbox" id="medico_checkbox">
+				<input type="checkbox" id="medico_checkbox" name="medicocb" value="Médico">
 				Médico
 			</label>
-			<input style="width: 65%;" type="number" name="medico" min="0" id="medico_field" disabled><br>
+			<input style="width: 65%;" type="number" name="medico" min="0" value="0" id="medico_field" readonly><br>
 
 			<label class="botaoescolha" for="remedios_checkbox">
-				<input type="checkbox" id="remedios_checkbox">
+				<input type="checkbox" id="remedios_checkbox" name="remedioscb" value="Remédios">
 				Remédios
 			</label>
-			<input style="width: 65%;" type="number" name="remedios" min="0" id="remedios_field" disabled><br>
+			<input style="width: 65%;" type="number" name="remedios" min="0" value="0" id="remedios_field" readonly><br>
 
 			<label class="botaoescolha" for="hospital_checkbox">
-				<input type="checkbox" id="hospital_checkbox">
+				<input type="checkbox" id="hospital_checkbox" name="hospitalcb" value="Hospital">
 				Hospital
 			</label>
-			<input style="width: 65%;" type="number" name="hospital" min="0" id="hospital_field" disabled><br>
+			<input style="width: 65%;" type="number" name="hospital" min="0" value="0" id="hospital_field" readonly><br>
 
 			<label class="botaoescolha" for="emprestimo_checkbox">
-				<input type="checkbox" id="emprestimo_checkbox">
+				<input type="checkbox" id="emprestimo_checkbox" name="emprestimocb" value="Empréstimo">
 				Empréstimo
 			</label>
-			<input style="width: 65%;" type="number" name="emprestimo" min="0" id="emprestimo_field" disabled><br>
+			<input style="width: 65%;" type="number" name="emprestimo" min="0" value="0" id="emprestimo_field" readonly><br>
 
 			<label class="titulos" for="id_socio">Serviço Extra</label><br>
 			<input style="width: 30%;" type="text" min="0">
@@ -104,39 +104,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script>
 	$('#aula_checkbox').click(function() {
-	    $('#aula_field').attr('disabled',! this.checked)
+	    $('#aula_field').attr('readonly',! this.checked)
 	});
 
 	$('#diaria_checkbox').click(function() {
-	    $('#diaria_field').attr('disabled',! this.checked)
+	    $('#diaria_field').attr('readonly',! this.checked)
 	});
 
 	$('#funeral_checkbox').click(function() {
-	    $('#funeral_field').attr('disabled',! this.checked)
+	    $('#funeral_field').attr('readonly',! this.checked)
 	});
 
 	$('#pensao_checkbox').click(function() {
-	    $('#pensao_field').attr('disabled',! this.checked)
+	    $('#pensao_field').attr('readonly',! this.checked)
 	});
 
 	$('#medico_checkbox').click(function() {
-	    $('#medico_field').attr('disabled',! this.checked)
+	    $('#medico_field').attr('readonly',! this.checked)
 	});
 
 	$('#remedios_checkbox').click(function() {
-	    $('#remedios_field').attr('disabled',! this.checked)
+	    $('#remedios_field').attr('readonly',! this.checked)
 	});
 
 	$('#hospital_checkbox').click(function() {
-	    $('#hospital_field').attr('disabled',! this.checked)
+	    $('#hospital_field').attr('readonly',! this.checked)
 	});
 
 	$('#emprestimo_checkbox').click(function() {
-	    $('#emprestimo_field').attr('disabled',! this.checked)
+	    $('#emprestimo_field').attr('readonly',! this.checked)
 	});
 
 	$('#extra').click(function() {
-	    $('#extra').attr('disabled',! this.checked)
+	    $('#extra').attr('readonly',! this.checked)
 	});
 </script>
 	

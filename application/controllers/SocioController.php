@@ -37,7 +37,7 @@ class SocioController extends CI_Controller {
 		$data_saida = $_POST['data_saida'];
 
 		$this->SocioModel->adicionar_socio($nome, $sexo, $profissao, $tipo, $imigrante, $elite, $data_entrada, $data_saida);
-		$this->index();
+		return redirect('socio');
 
 	}
 
