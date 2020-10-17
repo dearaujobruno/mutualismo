@@ -34,7 +34,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							echo '<tr>';
 							echo '<td>'.$row->nome_socio .'</td>';
 							echo '<td>'.$row->sexo_socio .'</td>';
-							echo '<td>'.$row->profissao_socio .'</td>';
+							echo '<td>'.$row->profissao_socio;
+							if (!is_null($row->tipo_profissao_socio)) {
+								echo ' ('.$row->tipo_profissao_socio.')';
+							}
+							'</td>';
 							echo '<td>'.$row->imigrante_socio .'</td>';
 							echo '<td>'.$row->elite_socio .'</td>';
 							echo '<td>'.$row->data_entrada .'</td>';

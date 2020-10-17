@@ -28,16 +28,22 @@ class SocioController extends CI_Controller {
 	public function adicionar_socio() {
 
 		$nome = $_POST['nome'];
-		$profissao = $_POST['profissao'];
-		$tipo = $_POST['tipo'];
 		$sexo = $_POST['sexo'];
+		$profissao = $_POST['profissao'];
+
+		if (!empty($_POST["tipo"])) {
+			$tipo = $_POST['tipo'];
+		} else {
+			$tipo = null;
+		}
+
 		$imigrante = $_POST['imigrante'];
 		$elite = $_POST['elite'];
 		$data_entrada = $_POST['data_entrada'];
 		$data_saida = $_POST['data_saida'];
 
 		$this->SocioModel->adicionar_socio($nome, $sexo, $profissao, $tipo, $imigrante, $elite, $data_entrada, $data_saida);
-		return redirect('socio');
+		$this->index();
 
 	}
 

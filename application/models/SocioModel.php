@@ -3,7 +3,7 @@
 class SocioModel extends CI_Model
 {
     
-    public function adicionar_socio($nome,$sexo, $profissao, $imigrante, $elite, $data_entrada, $data_saida)
+    public function adicionar_socio($nome, $sexo, $profissao, $tipo, $imigrante, $elite, $data_entrada, $data_saida)
     {
         $data = array(
         'nome_socio' => $nome,

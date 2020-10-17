@@ -37,11 +37,12 @@ CREATE TABLE conta_corrente (
     data_pagamento date,
     total_servicos int(255),
     todos_servicos varchar(255),
+    complemento varchar(255),
     id_socio int,    
     FOREIGN KEY (id_socio) REFERENCES socios(id_socio)
 );
-INSERT INTO conta_corrente (deve, haver, data_pagamento, total_servicos, todos_servicos, id_socio)
-VALUES ('0', '1000', '1905-12-02', '5000', 'Aula;', '1');
+INSERT INTO conta_corrente (deve, haver, data_pagamento, total_servicos, todos_servicos, complemento, id_socio)
+VALUES ('0', '1000', '1905-12-02', '5000', 'Aula;', 'pagamento retroativo', '1');
 
 
 --

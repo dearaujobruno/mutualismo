@@ -82,14 +82,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<input style="width: 65%;" type="number" name="emprestimo" min="0" value="0" id="emprestimo_field" readonly><br>
 
 			<label class="titulos" for="id_socio">Serviço Extra</label><br>
-			<input style="width: 30%;" type="text" min="0">
-			<input style="width: 65%;" type="number" name="extra" min="0"><br>
+			<input style="width: 30%;" type="text" name="servico_extra">
+			<input style="width: 65%;" type="number" name="extra" min="0" value="0"><br>
 
 			<label class="titulos">Data de Pagamento</label><br>
 			<input type="date" name="data_pagamento" min="1800-01-01" max="2030-12-31" required><br>
 
 			<label class="titulos">Complemento</label><br>
-			<textarea name="message" rows="5"
+			<textarea name="complemento" rows="5"
 			style=
 				"border: 1px solid #ccc;
   				 border-radius: 4px;

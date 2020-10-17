@@ -27,6 +27,9 @@ class ContaCorrenteController extends CI_Controller {
 	var $emprestimo = '';
 	var $data_pagamento = '';
 	
+	var $servico_extra = '';
+	var $extra = '0';
+	var $complemento = '';
 	var $total_servicos = '0';
 	var $todos_servicos = '';
 
@@ -93,6 +96,18 @@ class ContaCorrenteController extends CI_Controller {
 			$todos_servicos = $todos_servicos . $emprestimocb;
 		}
 
+		if (!empty($_POST["servico_extra"])) {
+			$servico_extra = $_POST['servico_extra'] . '; ';
+			$todos_servicos = $todos_servicos . $servico_extra;
+		}
+
+
+		if (!empty($_POST["complemento"])) {
+			$complemento = $_POST['complemento'];
+		} else {
+			$complemento = null;
+		}
+
 		$aula = $_POST['aula'];
 		$diaria = $_POST['diaria'];
 		$funeral = $_POST['funeral'];
@@ -101,11 +116,12 @@ class ContaCorrenteController extends CI_Controller {
 		$remedios = $_POST['remedios'];
 		$hospital = $_POST['hospital'];
 		$emprestimo = $_POST['emprestimo'];
+		$extra = $_POST['extra'];
 
 		
-		$total_servicos = $aula + $diaria + $funeral + $pensao + $medico + $remedios + $hospital + $emprestimo;
+		$total_servicos = $aula + $diaria + $funeral + $pensao + $medico + $remedios + $hospital + $emprestimo +$extra;
 
-		$this->ContaCorrenteModel->adicionar_contacorrente($deve, $haver, $data_pagamento, $total_servicos, $todos_servicos, $id_socio);
+		$this->ContaCorrenteModel->adicionar_contacorrente($deve, $haver, $data_pagamento, $total_servicos, $todos_servicos, $complemento, $id_socio);
 		return redirect('conta');
 
 
