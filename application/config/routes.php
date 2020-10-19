@@ -56,6 +56,7 @@ $route['adicionar-socio'] = 'SocioController/adicionar_socio';
 $route['visualizar-socio'] = 'SocioController/visualizar_socio';
 $route['conta'] = 'ContaCorrenteController';
 $route['adicionar-conta'] = 'ContaCorrenteController/adicionar_contacorrente';
+$route['visualizar-conta'] = 'ContaCorrenteController/visualizar_contacorrente';
 $route['menu'] = 'MenuController/menu';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
