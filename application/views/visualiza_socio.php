@@ -21,8 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<table class="tabela">
 				<tr>
 					<th>Nome</th>
+					<th>Profissão (Tipo)</th>
 					<th>Sexo</th>
-					<th>Profissão</th>
 					<th>Imigrante</th>
 					<th>Elite</th>
 					<th>Data de Entrada</th>
@@ -32,13 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<?php
 						foreach ($lista_socio->result() as $row) {
 							echo '<tr>';
-							echo '<td>'.$row->nome_socio .'</td>';
+							echo '<td>'.$row->nome_socio .'</td>';							
+							echo '<td>'.$row->profissao_socio.' ('.$row->tipo_profissao_socio.')</td>';
 							echo '<td>'.$row->sexo_socio .'</td>';
-							echo '<td>'.$row->profissao_socio;
-							if (!is_null($row->tipo_profissao_socio)) {
-								echo ' ('.$row->tipo_profissao_socio.')';
-							}
-							'</td>';
 							echo '<td>'.$row->imigrante_socio .'</td>';
 							echo '<td>'.$row->elite_socio .'</td>';
 							echo '<td>'.$row->data_entrada .'</td>';

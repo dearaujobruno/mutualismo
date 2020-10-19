@@ -24,21 +24,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<input type="text" name="profissao" required><br>
 
 			<label class="titulos">Tipo de Profissão/Atividade Econômica</label><br>
-			<label class="botaoescolha2" for="artesao">
+			<label class="botaoescolha" for="artesao">
 				Artesão
-				<input type="radio" id="artesao" name="tipo" value="Artesão">
+				<input type="radio" id="artesao" name="tipo" value="Artesão" required>
 			</label>
 
-			<label class="botaoescolha2" for="oficina">
+			<label class="botaoescolha" for="oficina">
 				Oficina
 				<input type="radio" id="oficina" name="tipo" value="Oficina">
-			</label><br>
+			</label>
 
-			<label class="titulos">Data de Entrada</label><br>
-			<input type="date" name="data_entrada" min="1800-01-01" max="2030-12-31" required><br>
-			
-			<label class="titulos">Data de Saída:</label><br>
-			<input type="date" name="data_saida" min="1800-01-01" max="2030-12-31" required><br>
+			<label class="botaoescolha" for="indeterminado_tipo">
+				Indeterminado
+				<input type="radio" id="indeterminado_tipo" name="tipo" value="Indeterminado">
+			</label><br>
 
 			<label class="titulos">Sexo</label><br>
 			<label class="botaoescolha" for="masculino">
@@ -90,6 +89,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				Indeterminado				
 			</label>
 			<br>
+
+			<label class="titulos">Data de Entrada</label><br>
+			<input type="date" name="data_entrada" min="1800-01-01" max="2030-12-31" required><br>
+			
+			<label class="titulos">Data de Saída:</label><br>
+			<input type="date" name="data_saida" min="1800-01-01" max="2030-12-31" required><br>
 
 	        <input  type="submit" value="ENVIAR">
 	    

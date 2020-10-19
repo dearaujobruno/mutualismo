@@ -37,53 +37,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<input type="checkbox" id="aula_checkbox" name="aulacb" value="Aula">
 				Aula
 			</label>
-			<input style="width: 65%;" type="number" name="aula" min="0" value="0" id="aula_field" readonly><br>
+			<input style="width: 65%;" type="number" name="aula" min="0"  id="aula_field" readonly><br>
 
 			<label class="botaoescolha" for="diaria_checkbox">
 				<input type="checkbox" id="diaria_checkbox" name="diariacb" value="Diária">
 				Diária (Acidente/Doença)
 			</label>
-			<input style="width: 65%;" type="number" name="diaria" min="0" value="0" id="diaria_field" readonly><br>
+			<input style="width: 65%;" type="number" name="diaria" min="0"  id="diaria_field" readonly><br>
 
 			<label class="botaoescolha" for="funeral_checkbox">
 				<input type="checkbox" id="funeral_checkbox" name="funeralcb" value="Funeral">
 				Funeral
 			</label>
-			<input style="width: 65%;" type="number" name="funeral" min="0" value="0" id="funeral_field" readonly><br>
+			<input style="width: 65%;" type="number" name="funeral" min="0"  id="funeral_field" readonly><br>
 
 			<label class="botaoescolha" for="pensao_checkbox">
-				<input type="checkbox" id="pensao_checkbox" name="pensaocb" value="0" value="Pensão">
+				<input type="checkbox" id="pensao_checkbox" name="pensaocb"  value="Pensão">
 				Pensão p/ Viúva
 			</label>
-			<input style="width: 65%;" type="number" name="pensao" min="0" value="0" id="pensao_field" readonly><br>
+			<input style="width: 65%;" type="number" name="pensao" min="0"  id="pensao_field" readonly><br>
 
 			<label class="botaoescolha" for="medico_checkbox">
 				<input type="checkbox" id="medico_checkbox" name="medicocb" value="Médico">
 				Médico
 			</label>
-			<input style="width: 65%;" type="number" name="medico" min="0" value="0" id="medico_field" readonly><br>
+			<input style="width: 65%;" type="number" name="medico" min="0"  id="medico_field" readonly><br>
 
 			<label class="botaoescolha" for="remedios_checkbox">
 				<input type="checkbox" id="remedios_checkbox" name="remedioscb" value="Remédios">
 				Remédios
 			</label>
-			<input style="width: 65%;" type="number" name="remedios" min="0" value="0" id="remedios_field" readonly><br>
+			<input style="width: 65%;" type="number" name="remedios" min="0"  id="remedios_field" readonly><br>
 
 			<label class="botaoescolha" for="hospital_checkbox">
 				<input type="checkbox" id="hospital_checkbox" name="hospitalcb" value="Hospital">
 				Hospital
 			</label>
-			<input style="width: 65%;" type="number" name="hospital" min="0" value="0" id="hospital_field" readonly><br>
+			<input style="width: 65%;" type="number" name="hospital" min="0"  id="hospital_field" readonly><br>
 
 			<label class="botaoescolha" for="emprestimo_checkbox">
 				<input type="checkbox" id="emprestimo_checkbox" name="emprestimocb" value="Empréstimo">
 				Empréstimo
 			</label>
-			<input style="width: 65%;" type="number" name="emprestimo" min="0" value="0" id="emprestimo_field" readonly><br>
+			<input style="width: 65%;" type="number" name="emprestimo" min="0"  id="emprestimo_field" readonly><br>
 
 			<label class="titulos" for="id_socio">Serviço Extra</label><br>
 			<input style="width: 30%;" type="text" name="servico_extra">
-			<input style="width: 65%;" type="number" name="extra" min="0" value="0"><br>
+			<input style="width: 65%;" type="number" name="extra" min="0" ><br>
 
 			<label class="titulos">Data de Pagamento</label><br>
 			<input type="date" name="data_pagamento" min="1800-01-01" max="2030-12-31" required><br>

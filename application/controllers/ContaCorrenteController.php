@@ -101,22 +101,66 @@ class ContaCorrenteController extends CI_Controller {
 			$todos_servicos = $todos_servicos . $servico_extra;
 		}
 
-
 		if (!empty($_POST["complemento"])) {
 			$complemento = $_POST['complemento'];
 		} else {
 			$complemento = null;
 		}
 
-		$aula = $_POST['aula'];
-		$diaria = $_POST['diaria'];
-		$funeral = $_POST['funeral'];
-		$pensao = $_POST['pensao'];
-		$medico = $_POST['medico'];
-		$remedios = $_POST['remedios'];
-		$hospital = $_POST['hospital'];
-		$emprestimo = $_POST['emprestimo'];
-		$extra = $_POST['extra'];
+
+		if (!empty($_POST["aula"])) {
+			$aula = $_POST['aula'];
+		} else {
+			$aula = 0;
+		}
+
+		if (!empty($_POST["diaria"])) {
+			$diaria = $_POST['diaria'];
+		} else {
+			$diaria = 0;
+		}
+
+		if (!empty($_POST["funeral"])) {
+			$funeral = $_POST['funeral'];
+		} else {
+			$funeral = 0;
+		}
+
+		if (!empty($_POST["pensao"])) {
+			$pensao = $_POST['pensao'];
+		} else {
+			$pensao = 0;
+		}
+
+		if (!empty($_POST["medico"])) {
+			$medico = $_POST['medico'];
+		} else {
+			$medico = 0;
+		}
+
+		if (!empty($_POST["remedios"])) {
+			$remedios = $_POST['remedios'];
+		} else {
+			$remedios = 0;
+		}
+
+		if (!empty($_POST["hospital"])) {
+			$hospital = $_POST['hospital'];
+		} else {
+			$hospital = 0;
+		}
+
+		if (!empty($_POST["emprestimo"])) {
+			$emprestimo = $_POST['emprestimo'];
+		} else {
+			$emprestimo = 0;
+		}
+
+		if (!empty($_POST["extra"])) {
+			$extra = $_POST['extra'];
+		} else {
+			$extra = 0;
+		}
 
 		
 		$total_servicos = $aula + $diaria + $funeral + $pensao + $medico + $remedios + $hospital + $emprestimo +$extra;
