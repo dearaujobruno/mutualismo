@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<center>
-		<h1>Mutualismo Operário</h1>
+		<h1>Banco de Dados sobre Sociedade de Auxílios<br> Mútuos União Operária (São Borja, 1905-1911)</h1>
 	</center>
 
 </body>

@@ -11,6 +11,7 @@ class SocioController extends CI_Controller {
 	var $elite;
 	var $data_entrada;
 	var $data_saida;
+	var $observacao;
 
 	public function index()
 	{
@@ -30,19 +31,18 @@ class SocioController extends CI_Controller {
 		$nome = $_POST['nome'];
 		$sexo = $_POST['sexo'];
 		$profissao = $_POST['profissao'];
-
-		if (!empty($_POST["tipo"])) {
-			$tipo = $_POST['tipo'];
-		} else {
-			$tipo = null;
-		}
-
+		$tipo = $_POST['tipo'];
 		$imigrante = $_POST['imigrante'];
 		$elite = $_POST['elite'];
 		$data_entrada = $_POST['data_entrada'];
 		$data_saida = $_POST['data_saida'];
+		if (!empty($_POST["observacao"])) {
+			$observacao = $_POST['observacao'];
+		} else {
+			$observacao = null;
+		}
 
-		$this->SocioModel->adicionar_socio($nome, $sexo, $profissao, $tipo, $imigrante, $elite, $data_entrada, $data_saida);
+		$this->SocioModel->adicionar_socio($nome, $sexo, $profissao, $tipo, $imigrante, $elite, $data_entrada, $data_saida, $observacao);
 		$this->index();
 
 	}

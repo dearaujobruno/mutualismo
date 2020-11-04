@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<th>Elite</th>
 				<th>Data de Entrada</th>
 				<th>Data de Saída</th>
+				<th>Observação</th>
 			</tr>
 
 		<?php
@@ -37,6 +38,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				echo '<td>'.$row->elite_socio .'</td>';
 				echo '<td>'.$row->data_entrada .'</td>';
 				echo '<td>'.$row->data_saida .'</td>';
+				echo '<td>';
+				if (!is_null($row->observacao)) {
+					echo $row->observacao;
+				} else {
+					echo 'N/A';
+				}; 
+				echo '</td>';
 				echo '</tr>';
 			}
 		?>

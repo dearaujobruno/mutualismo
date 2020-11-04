@@ -21,7 +21,7 @@ class ContaCorrenteModel extends CI_Model
     }
 
     public function listar_contacorrente() {
-        $query = $this->db->query("SELECT socios.nome_socio, conta_corrente.deve, conta_corrente.haver, DATE_FORMAT(conta_corrente.data_pagamento, '%d/%m/%Y') as data_pagamento, conta_corrente.total_servicos, conta_corrente.todos_servicos, conta_corrente.complemento FROM socios INNER JOIN conta_corrente ON socios.id_socio = conta_corrente.id_socio;");
+        $query = $this->db->query("SELECT socios.nome_socio, conta_corrente.deve, conta_corrente.haver, DATE_FORMAT(conta_corrente.data_pagamento, '%d/%m/%Y') as data_pagamento, conta_corrente.total_servicos, conta_corrente.todos_servicos, conta_corrente.complemento FROM socios INNER JOIN conta_corrente ON socios.id_socio = conta_corrente.id_socio ORDER BY socios.nome_socio, conta_corrente.data_pagamento;");
         return $query;
     }
 

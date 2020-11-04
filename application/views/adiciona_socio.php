@@ -96,6 +96,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label class="titulos">Data de Saída:</label><br>
 			<input type="date" name="data_saida" min="1800-01-01" max="2030-12-31" required><br>
 
+			<label class="titulos">Observação</label><br>
+			<textarea name="observacao" rows="5"
+			style=
+				"border: 1px solid #ccc;
+  				 border-radius: 4px;
+  				 width: 100%;
+  				 box-sizing: border-box;
+  				 margin: 8px 0;"></textarea>
+
 	        <input  type="submit" value="ENVIAR">
 	    
 	    <?php echo form_close(); ?>
