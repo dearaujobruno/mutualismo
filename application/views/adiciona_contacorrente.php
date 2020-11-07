@@ -102,6 +102,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	</div>
 
+	<?php include 'footer.html';?>	
+
 <script>
 	$('#aula_checkbox').click(function() {
 	    $('#aula_field').attr('readonly',! this.checked)

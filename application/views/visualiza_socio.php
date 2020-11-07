@@ -51,5 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</table>
 	</div>
 
+	<?php include 'footer.html';?>	
+
 </body>
 </html>

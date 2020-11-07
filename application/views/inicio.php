@@ -8,13 +8,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Página Inicial</title>
 </head>
 <body>
-
+	
 	<?php include 'header.html';?>
-
 
 	<center>
 		<h1>Banco de Dados sobre Sociedade de Auxílios<br> Mútuos União Operária (São Borja, 1905-1911)</h1>
 	</center>
+
+	<?php include 'footer.html';?>	
 
 </body>
 </html>
