@@ -28,6 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</tr>
 
 		<?php
+			$saldo = 0;
+			$deve_total = 0;
+			$haver_total = 0;
 			foreach ($lista_contacorrente->result() as $row) {
 				echo '<tr>';
 				echo '<td>'.$row->nome_socio .'</td>';							
@@ -57,9 +60,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				echo '</td>';
 				echo '<td>'.$row->data_pagamento .'</td>';
 				echo '</tr>';
+				$deve_total = $deve_total + $row->deve;
+				$haver_total = $haver_total + $row->haver;				
 			}
+			$saldo = $deve_total - $haver_total;
 		?>
 		</table>
+		<?php echo '<br>'; ;?>
+		<?php echo '<h3> Saldo: ' . $saldo ;?>
 	</div>
 
 	<?php include 'footer.html';?>	

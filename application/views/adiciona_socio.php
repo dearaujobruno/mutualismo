@@ -91,10 +91,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<br>
 
 			<label class="titulos">Data de Entrada</label><br>
-			<input type="date" name="data_entrada" min="1900-01-01" max="1920-12-31" required><br>
+			<input type="date" name="data_entrada" min="1905-01-01" max="1911-12-31" required><br>
 			
 			<label class="titulos">Data de Saída:</label><br>
-			<input type="date" name="data_saida" min="1900-01-01" max="1920-12-31" required><br>
+			<input type="date" name="data_saida" min="1905-01-01" max="1911-12-31" required><br>
 
 			<label class="titulos">Observação</label><br>
 			<textarea name="observacao" rows="5"
