@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   				 box-sizing: border-box;
   				 margin: 8px 0;"></textarea>
 
-			<input type="submit" value="ENVIAR">
+			<input type="submit" class="btenviar" value="ENVIAR">
 		<?php echo form_close(); ?>
 		
 	</div>

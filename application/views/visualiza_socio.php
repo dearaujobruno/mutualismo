@@ -26,6 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<th>Data de Entrada</th>
 				<th>Data de Saída</th>
 				<th>Observação</th>
+				<th></th>
 			</tr>
 
 		<?php
@@ -44,6 +45,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				} else {
 					echo 'N/A';
 				}; 
+				echo '</td>';
+				echo '<td>';
+					echo form_open('deletar-socio', array('onsubmit' => "return confirm('Você realmente deseja excluir? Valores de conta corrente atribuidos a este sócio também serão exluídos.');"));
+						echo '<input type="hidden" name="id_socio" value="'.$row->id_socio.'">';
+						echo '<input type="submit" class="btexcluir" value="x">';
+					echo form_close();
 				echo '</td>';
 				echo '</tr>';
 			}

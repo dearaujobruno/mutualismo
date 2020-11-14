@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SocioController extends CI_Controller {
 
+	var $id_socio = '';
 	var $nome;
 	var $profissao;
 	var $tipo;
@@ -50,6 +51,13 @@ class SocioController extends CI_Controller {
 	public function visualizar_socio() {
 		$data['lista_socio'] = $this->SocioModel->listar_socio();
 		$this->load->view('visualiza_socio', $data);
+	}
+
+	public function deletar_socio() {		
+		$id_socio = $_POST['id_socio'];
+		$this->SocioModel->deletar_socio($id_socio);
+
+		$this->visualizar_socio();
 	}
 
 }

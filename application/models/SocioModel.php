@@ -27,5 +27,11 @@ class SocioModel extends CI_Model
         return $query;
     }
 
+    public function deletar_socio($id_socio) {
+        $this->db->delete('conta_corrente', array('id_socio' => $id_socio));
+        $this->db->delete('socios', array('id_socio' => $id_socio));
+
+    }
+
 
 }

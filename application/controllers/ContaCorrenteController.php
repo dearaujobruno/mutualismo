@@ -6,6 +6,7 @@ class ContaCorrenteController extends CI_Controller {
 	var $deve ='';
 	var $haver ='';
 	var $id_socio = '';
+	var $id_conta = '';
 
 	var $aulacb = '';
 	var $diariacb = '';
@@ -175,5 +176,11 @@ class ContaCorrenteController extends CI_Controller {
 	public function visualizar_contacorrente() {
 		$data['lista_contacorrente'] = $this->ContaCorrenteModel->listar_contacorrente();
 		$this->load->view('visualiza_contacorrente', $data);
+	}
+
+	public function deletar_conta() {
+		$id_conta = $_POST['id_conta'];
+		$this->ContaCorrenteModel->deletar_contacorrente($id_conta);
+		$this->visualizar_contacorrente();
 	}
 }
