@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$deve_total = $deve_total + $row->deve;
 				$haver_total = $haver_total + $row->haver;				
 			}
-			$saldo = $deve_total - $haver_total;
+			$saldo = $haver_total - $deve_total;
 		?>
 		</table>
 		<?php echo '<br>'; ;?>

@@ -13,6 +13,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<center>
 		<h1>Banco de Dados sobre Sociedade de Auxílios<br> Mútuos União Operária (São Borja, 1905-1911)</h1>
+		
+		<h5>
+			Coordenador do Projeto de Pesquisa: Anderson Pereira Corrêa<br>
+			Autor do Sistema Web: Bruno Oliveira de Araújo
+		</h5>
 	</center>
 
 	<?php include 'footer.html';?>	

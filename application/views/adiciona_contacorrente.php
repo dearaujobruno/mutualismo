@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Adicione Conta Corrente</title>
+	<title>Adicionar Conta Corrente</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/estilo.css');?>" />
 	<script src="<?php echo 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'; ?>"></script>
 </head>
